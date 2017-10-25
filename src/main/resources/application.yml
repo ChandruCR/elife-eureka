@@ -1,0 +1,13 @@
+### Spring properties
+# eureka server configuration
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    
+# HTTP Server (Tomcat) Port
+server:
+  port: 7000
+  

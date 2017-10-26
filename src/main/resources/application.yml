@@ -2,7 +2,7 @@
 # eureka server configuration
 eureka:
   instance:
-    hostname: localhost
+    hostname: 192.168.178.227
   client:
     register-with-eureka: false
     fetch-registry: false
@@ -10,4 +10,16 @@ eureka:
 # HTTP Server (Tomcat) Port
 server:
   port: 7000
-  
+
+# Logging
+logging:
+  file: elife-eureka.log
+  level:
+    root:  ERROR
+    org.springframework: ERROR
+    org.springframework.data: ERROR
+    com.goldenducks: DEBUG
+    org.mongodb: ERROR
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
